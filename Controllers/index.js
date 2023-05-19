@@ -67,7 +67,7 @@ module.exports.verifyOtp = async function(req, res){
             return res.status(400).json({ error: 'Cant reuse OTP, generate again!!!' });
         }
 
-        if (user.otpGeneratedAt && (Date.now() - user.otpGeneratedAt) < (5 * 60 * 1000)) {
+        if (user.otpGeneratedAt && (Date.now() - user.otpGeneratedAt) > (5 * 60 * 1000)) {
             return res.status(400).json({ error: 'OTP has expired. Please generate a new OTP.' });
         }
 
