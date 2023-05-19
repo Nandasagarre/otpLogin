@@ -14,8 +14,8 @@ function EmailOtp(token){
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 's.nandasagarreddy@gmail.com',
-      pass: 'ykcxanydfspkygqe',
+      user: 'will be sent to you through email',
+      pass: 'will be sent to you through email',
     },
   });
 
